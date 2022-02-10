@@ -150,7 +150,7 @@ class data_spider:
                                 if self.is_pinned_weibo(w):
                                     continue
                                 else:
-                                    print(wb)  # TODO: 微博展开
+                                    print(wb)
                                     # print(u'{}已获取{}({})的第{}页微博{}'.format(
                                     #     '-' * 30, self.user['screen_name'],
                                     #     self.user['id'], page, '-' * 30))
