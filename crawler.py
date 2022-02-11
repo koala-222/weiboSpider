@@ -27,20 +27,20 @@ class TirelessCrawler(object):
             try:
                 span = content.find_element_by_class_name("""expand""")
                 span.click()
-                time.sleep(0.1)
+                time.sleep(1)
             except:
                 pass
             finally:
-                print(content.text[:10] + " ...... " + content.text[-10:])
+                print(content.text[:30] + " ...... " + content.text[-30:])
                 self.array.add(content.text)
             number += 1
 
     def crawl(self):
         """展开微博并保存，滑动页面，直到底端"""
-        for i in range(120):
+        for i in range(60):
             self.crawl_current_content()
             self.driver.find_element_by_tag_name('body').send_keys(Keys.END)
-            time.sleep(1)
+            time.sleep(5)
 
     def save_to(self, file):
         """以JSON格式写入文件"""

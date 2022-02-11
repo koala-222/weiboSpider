@@ -12,7 +12,7 @@ print('准备登陆weibo.com')
 wait = WebDriverWait(driver, 10)
 driver.get("https://weibo.com/login.php")
 # 重要：暂停1分钟进行预登陆，此处填写账号密码及验证
-time.sleep(60)
+time.sleep(30)
 
 
 '''输入关键词到搜索框，完成搜索'''
