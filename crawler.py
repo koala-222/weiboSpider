@@ -37,7 +37,7 @@ class TirelessCrawler(object):
 
     def crawl(self):
         """展开微博并保存，滑动页面，直到底端"""
-        for i in range(60):
+        for i in range(40):
             self.crawl_current_content()
             self.driver.find_element_by_tag_name('body').send_keys(Keys.END)
             time.sleep(5)
